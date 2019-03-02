@@ -1,0 +1,24 @@
+{
+  "name": "proxy_server",
+  "version": "1.0.0",
+  "description": "> Project description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elite-grub/proxy-picturemodal-bl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elite-grub/proxy-picturemodal-bl/issues"
+  },
+  "homepage": "https://github.com/elite-grub/proxy-picturemodal-bl#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  }
+}
