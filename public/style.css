@@ -1,4 +1,4 @@
-div.eg {
+/* div.eg {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   color: white;
@@ -9,36 +9,36 @@ div.eg {
   font-variant-caps: titling-caps;
   font-size: 21px;
   text-shadow: 3px 4px 3px #0000002e;
-}
+} */
 
-div.logo {
+/* div.logo {
   background-color: #d4431b;
   position: absolute;
   left: 158px;
   padding: 6px 4px 0px 7px;
-}
+} */
 
-i.far.fa-circle {
+/* i.far.fa-circle {
   font-size: 50px;
   position: relative;
   color: white;
   text-shadow: 3px 4px 3px #0000002e;
-}
+} */
 
-i.fas.fa-utensils {
+/* i.fas.fa-utensils {
   font-size: 24px;
   position: relative;
   left: -38px;
   top: -9px;
   color: white;
   text-shadow: 3px 4px 3px #0000002e;
-}
+} */
 
-img.search-bar {
+/* img.search-bar {
   width: 990px;
   height: 64px;
   position: relative;
-}
+} */
 
 div.search-bar {
   height: 64px;
