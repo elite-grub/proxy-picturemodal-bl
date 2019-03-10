@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
-  integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
-  integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -27,16 +26,15 @@
     <div class="main-content">
       <div class="top-container">
         <div class="content">
-          <div class="title">
+          <div class="top-title">
             <img class="restaurant" src="https://s3-us-west-1.amazonaws.com/elite-grub/Title.png" />
           </div>
               <div class="sub-header">
             <div class="map">
-                <img class="map" src="https://s3-us-west-1.amazonaws.com/elite-grub/Map.png" />
+                <div id="mapView"></div>
             </div>
             <div class="pictures">
-              <div id="pictures">
-            </div>
+              <div id="pictures"></div>
           </div>
         </div>
       </div>
@@ -44,9 +42,7 @@
         <div class="bottom-content">
           <div class="left-column">
             <div class="popular-dish">
-                <img class="popular" src="https://s3-us-west-1.amazonaws.com/elite-grub/Popular-dish.png" />
-              <div id="popular-dishes">
-            </div>
+                <div id="popularDishes"></div>
             <div>
               <div class="ask-community">
                 <img class="ask-community" src="https://s3-us-west-1.amazonaws.com/elite-grub/Ask-Community.png" />
@@ -81,13 +77,15 @@
   <div class="bottom-footer">
     <img class="bottom-footer" src="https://s3-us-west-1.amazonaws.com/elite-grub/Footer1.png" />
   </div>
-  <div id="searchBar"></div>
+  <!-- <div id="reviews"></div> -->
 </body>
   <script src="http://elite-grub-th1.us-west-2.elasticbeanstalk.com/bundle.js"></script>
-  <script src="http://reviews-dev.us-west-1.elasticbeanstalk.com/bundle.js"></script>
   <script src="http://picturemodal-env.vgbpguxcpb.us-west-1.elasticbeanstalk.com/bundle.js"></script>
+  <!-- <script src="http://reviews3-dev.us-west-1.elasticbeanstalk.com/bundle.js"></script> -->
+  <script src="http://component-populardishes-wf-dev.us-west-1.elasticbeanstalk.com/bundle.js"></script>
+  <script src="http://component-map-kt-dev.us-east-1.elasticbeanstalk.com/bundle.js"></script>
   <script>
-    const random = Math.floor(Math.random() * 50);
+    const random = Math.floor(Math.random() * 99) +1 ;
     ReactDOM.render(
       React.createElement(SearchBar),
       document.getElementById('searchBar')
@@ -96,9 +94,17 @@
         React.createElement(Pictures, { id :random }),
         document.getElementById('pictures')
       );
+      // ReactDOM.render(
+      //   React.createElement(Reviews, {id: random}),
+      //   document.getElementById('reviews')
+      // );
       ReactDOM.render(
-        React.createElement(Reviews),
-        document.getElementById('reviews')
-      );
+      React.createElement(MapView, { id: random }),
+      document.getElementById('mapView')
+    );
+      ReactDOM.render(
+        React.createElement(PopularDishes, { id: random }),
+        document.getElementById('popularDishes')
+    );
   </script>
 </html>
