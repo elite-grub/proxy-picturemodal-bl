@@ -22,13 +22,13 @@ div.search-bar {
 
 div.drop-down {
   height: 41px;
-  width: 100%;
   display: flex;
   justify-content: center;
   background-color: #fafafa;
   border: solid #ededed;
-  border-width: 10px;
+  border-width: 0px;
   border-top: 0px;
+  margin-bottom: 10px;
 
 }
 img.drop-down {
@@ -172,4 +172,18 @@ div img.morePages {
 
 div.bodyContainer {
   padding-left:0px;
+}
+div.container {
+  padding-bottom: 0px;
+}
+div.map-text {
+  padding: 5px;
+}
+
+div.container.sc-gzVnrw.fklaiZ div a img {
+  padding: 4px;
+}
+
+div.main-content {
+  width: 101%;
 }
