@@ -47,7 +47,7 @@
               <div class="ask-community">
                 <img class="ask-community" src="https://s3-us-west-1.amazonaws.com/elite-grub/Ask-Community.png" />
               </div>
-              <div id="reviews">
+              <div id="Reviews">
               </div>
             </div>
           </div>
@@ -74,18 +74,21 @@
       </div>
     </div>
   </div>
-  <div class="bottom-footer">
+  <div class="bottom-footer1">
     <img class="bottom-footer" src="https://s3-us-west-1.amazonaws.com/elite-grub/Footer1.png" />
   </div>
-  <!-- <div id="reviews"></div> -->
 </body>
   <script src="http://elite-grub-th1.us-west-2.elasticbeanstalk.com/bundle.js"></script>
   <script src="http://picturemodal-env.vgbpguxcpb.us-west-1.elasticbeanstalk.com/bundle.js"></script>
-  <!-- <script src="http://reviews3-dev.us-west-1.elasticbeanstalk.com/bundle.js"></script> -->
+  <script src="http://reviews-dev.us-west-1.elasticbeanstalk.com/bundle.js"></script>
   <script src="http://component-populardishes-wf-dev.us-west-1.elasticbeanstalk.com/bundle.js"></script>
   <script src="http://component-map-kt-dev.us-east-1.elasticbeanstalk.com/bundle.js"></script>
   <script>
     const random = Math.floor(Math.random() * 99) +1 ;
+      ReactDOM.render(
+        React.createElement(Reviews, {id: 1}),
+        document.getElementById('Reviews')
+    );
     ReactDOM.render(
       React.createElement(SearchBar),
       document.getElementById('searchBar')
@@ -94,10 +97,6 @@
         React.createElement(Pictures, { id :random }),
         document.getElementById('pictures')
       );
-      // ReactDOM.render(
-      //   React.createElement(Reviews, {id: random}),
-      //   document.getElementById('reviews')
-      // );
       ReactDOM.render(
       React.createElement(MapView, { id: random }),
       document.getElementById('mapView')

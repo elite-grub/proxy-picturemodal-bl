@@ -157,14 +157,19 @@ img.popular {
 }
 
 
-
-
-
-div.bottom-footer {
+div.bottom-footer1 {
   display: flex;
   justify-content: center;
   background: whitesmoke;
   border: solid #ebebeb;
   border-width: thin;
   padding-top: 20px;
+}
+
+div img.morePages {
+  width: 660px;
+}
+
+div.bodyContainer {
+  padding-left:0px;
 }
